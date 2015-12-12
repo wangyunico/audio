@@ -15,6 +15,7 @@ class ViewController: UIViewController,WYAudioButtonDelegate {
     
     @IBOutlet weak var playBotton: UIButton!
     @IBOutlet weak var recordButton: WYAudioButton!
+    @IBOutlet weak var indicatorView: UIImageView!
     var record:WYRecordManager?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +39,16 @@ class ViewController: UIViewController,WYAudioButtonDelegate {
     }
     func recordCanceled(record:WYRecordManager) -> Void{
         self.playBotton.hidden = true
+        self.indicatorView.image = UIImage(named: "mac_0")
     }
     func recordFinished(record:WYRecordManager) -> Void {
         self.playBotton.hidden = false
         self.record = record
+        self.indicatorView.image = UIImage(named: "mac_0")
+    }
+    func recording(record: WYRecordManager, degree: Int) {
+        let imageName = "mac_\(degree)"
+        self.indicatorView.image = UIImage(named: imageName)
     }
     
     // MARK - target-action

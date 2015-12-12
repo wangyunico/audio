@@ -24,9 +24,10 @@ protocol  WYAudioButtonDelegate:class{
     func recordStart(record:WYRecordManager) -> Void
     func recordCanceled(record:WYRecordManager) -> Void
     func recordFinished(record:WYRecordManager) -> Void
+    func recording(record:WYRecordManager,degree:Int) ->Void
 }
 
-class WYAudioButton: UIButton {
+class WYAudioButton: UIButton, WYRecorderDelegate{
     
     // 因为用enum,与KVO无缘分了
     var recordState:WYAudioButtonState = .Normal {
@@ -73,12 +74,18 @@ class WYAudioButton: UIButton {
         self.addTarget(self, action: "recordButtonDidTouchDown:", forControlEvents: .TouchDown)
         self.addTarget(self, action: "recordButtonDidTouchUpInside:", forControlEvents: .TouchUpInside)
         self.addTarget(self, action: "recordButtonDidTouchDragExit:", forControlEvents: .TouchDragExit)
+        self.recordManager.delegate = self
     }
     
     
     
     
+    // WYRecorderDelegate
     
+    func recoderManager(recorderManger: WYRecordManager, degree: Int) {
+        print(degree)
+        self.delegate?.recording(recordManager, degree: degree)
+    }
     
     
     

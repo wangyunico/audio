@@ -37,17 +37,28 @@
                                     <action selector="playButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jvd-93-xg8"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mac_0" translatesAutoresizingMaskIntoConstraints="NO" id="nWk-zE-WN8">
+                                <rect key="frame" x="135" y="259" width="50" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="0fv-MC-yK1"/>
+                                    <constraint firstAttribute="height" constant="50" id="BVe-jt-cLa"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2g7-uU-cTH" secondAttribute="bottom" constant="160" id="A5i-ap-vOx"/>
+                            <constraint firstItem="2g7-uU-cTH" firstAttribute="top" secondItem="nWk-zE-WN8" secondAttribute="bottom" constant="39" id="K8d-Yc-UUH"/>
                             <constraint firstItem="8FU-wG-ePj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="WGt-D6-BC6"/>
+                            <constraint firstItem="nWk-zE-WN8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pu3-pK-Up6"/>
                             <constraint firstItem="2g7-uU-cTH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xSa-sY-h9s"/>
                             <constraint firstItem="8FU-wG-ePj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zXO-Vz-ZbM"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="indicatorView" destination="nWk-zE-WN8" id="mw7-OH-EuN"/>
                         <outlet property="playBotton" destination="8FU-wG-ePj" id="7aq-j4-N1L"/>
                         <outlet property="recordButton" destination="2g7-uU-cTH" id="8CK-50-4nQ"/>
                     </connections>
@@ -57,4 +68,7 @@
             <point key="canvasLocation" x="162" y="332"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mac_0" width="128" height="128"/>
+    </resources>
 </document>

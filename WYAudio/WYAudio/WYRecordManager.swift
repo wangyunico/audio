@@ -116,9 +116,9 @@ class WYRecordManager: NSObject,AVAudioRecorderDelegate {
             degree = 2
         }else if result > 3 && result < 5 {
             degree = 3
-        }else if result > 5 && result < 10 {
+        }else if result > 5 && result < 7 {
             degree = 4
-        }else if result > 10  {
+        }else if result > 7  {
             degree = 5
         }
         self.delegate?.recoderManager(self, degree: degree)
