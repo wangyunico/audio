@@ -141,7 +141,7 @@ extension UIButton {
                 self.setTitle("正在播放", forState: .Normal)
                 
             }else{
-                self.setTitle("点击播放", forState: .Normal)
+                self.setTitle("点播", forState: .Normal)
             }
         }
     }
