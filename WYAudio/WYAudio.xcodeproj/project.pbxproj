@@ -13,6 +13,8 @@
 		181218441C1BE3D1000B3095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181218431C1BE3D1000B3095 /* Assets.xcassets */; };
 		181218471C1BE3D1000B3095 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181218451C1BE3D1000B3095 /* LaunchScreen.storyboard */; };
 		181218551C1BE593000B3095 /* WYNavigation.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 181218531C1BE530000B3095 /* WYNavigation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1812185D1C1BECF6000B3095 /* WYRecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812185C1C1BECF6000B3095 /* WYRecordManager.swift */; };
+		181218601C1BF15E000B3095 /* NSObject+CurrentTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812185F1C1BF15E000B3095 /* NSObject+CurrentTime.swift */; };
 		43F6C08ECDA5F2BD68575774 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC0CBC50AF4ECE4A60BDC3F /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		181218461C1BE3D1000B3095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		181218481C1BE3D1000B3095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1812184E1C1BE530000B3095 /* WYNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WYNavigation.xcodeproj; path = WYNavigation/WYNavigation.xcodeproj; sourceTree = SOURCE_ROOT; };
+		1812185C1C1BECF6000B3095 /* WYRecordManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WYRecordManager.swift; sourceTree = "<group>"; };
+		1812185F1C1BF15E000B3095 /* NSObject+CurrentTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+CurrentTime.swift"; sourceTree = "<group>"; };
 		3BB122E26CE3F1DE4E334FC2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DBC0CBC50AF4ECE4A60BDC3F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE0FE4C848216C76BB7A47DC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				1812184E1C1BE530000B3095 /* WYNavigation.xcodeproj */,
 				1812183C1C1BE3D1000B3095 /* AppDelegate.swift */,
 				1812183E1C1BE3D1000B3095 /* ViewController.swift */,
+				1812185C1C1BECF6000B3095 /* WYRecordManager.swift */,
+				1812185E1C1BF13C000B3095 /* util */,
 				181218401C1BE3D1000B3095 /* Main.storyboard */,
 				181218431C1BE3D1000B3095 /* Assets.xcassets */,
 				181218451C1BE3D1000B3095 /* LaunchScreen.storyboard */,
@@ -103,6 +109,14 @@
 				181218531C1BE530000B3095 /* WYNavigation.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1812185E1C1BF13C000B3095 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				1812185F1C1BF15E000B3095 /* NSObject+CurrentTime.swift */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 		A50716755055E7911681438C /* Pods */ = {
@@ -263,6 +277,8 @@
 			files = (
 				1812183F1C1BE3D1000B3095 /* ViewController.swift in Sources */,
 				1812183D1C1BE3D1000B3095 /* AppDelegate.swift in Sources */,
+				181218601C1BF15E000B3095 /* NSObject+CurrentTime.swift in Sources */,
+				1812185D1C1BECF6000B3095 /* WYRecordManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
