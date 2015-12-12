@@ -9,7 +9,7 @@
 import UIKit
 import WYNavigation
 
-private var kPlayButtonisPlaying:Void?
+
 
 class ViewController: UIViewController,WYAudioButtonDelegate {
     
@@ -21,6 +21,7 @@ class ViewController: UIViewController,WYAudioButtonDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         self.playBotton.hidden = true
         self.recordButton.delegate = self
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "下一页", style: .Plain, target: self, action: "rightButtonTap")
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,6 +52,11 @@ class ViewController: UIViewController,WYAudioButtonDelegate {
         }
     }
     
+    func rightButtonTap(){
+        let nextViewController = RecordListPage()
+        self.pushPage(nextViewController)
+    }
+    
     // MARK - prvate function
     /**
     停止播放音乐
@@ -64,15 +70,5 @@ class ViewController: UIViewController,WYAudioButtonDelegate {
     
 }
 
-extension UIButton {
-    
-    public var  isPlaying:Bool?{
-        get{
-            return objc_getAssociatedObject(self, &kPlayButtonisPlaying) as? Bool
-        }
-        set{
-            objc_setAssociatedObject(self, &kPlayButtonisPlaying , newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
-}
+
 

@@ -7,16 +7,23 @@
 //
 
 import UIKit
+import WYNavigation
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
+    var mainStroyBoard:UIStoryboard!
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-       
+        self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
+        self.window!.autoresizesSubviews = true
+        self.mainStroyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let viewController =  self.mainStroyBoard.instantiateViewControllerWithIdentifier("firstViewController")
+        WYPageManager.defaultManger.setRootViewController(viewController)
+        self.window!.makeKeyAndVisible()
         return true
     }
     

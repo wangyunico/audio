@@ -16,6 +16,11 @@
 		1812185D1C1BECF6000B3095 /* WYRecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812185C1C1BECF6000B3095 /* WYRecordManager.swift */; };
 		181218601C1BF15E000B3095 /* NSObject+CurrentTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812185F1C1BF15E000B3095 /* NSObject+CurrentTime.swift */; };
 		181218621C1C078B000B3095 /* WYAudioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181218611C1C078B000B3095 /* WYAudioButton.swift */; };
+		181218681C1C1F60000B3095 /* RecordListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181218671C1C1F60000B3095 /* RecordListPage.swift */; };
+		1812186B1C1C1FD8000B3095 /* RecordListPageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812186A1C1C1FD8000B3095 /* RecordListPageViewCell.swift */; };
+		1812186D1C1C2073000B3095 /* RecordListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812186C1C1C2073000B3095 /* RecordListModel.swift */; };
+		1812186F1C1C2145000B3095 /* RecordListPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812186E1C1C2145000B3095 /* RecordListPlayerManager.swift */; };
+		18C0DE291C1C33B300DFE8D5 /* RecordListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C0DE281C1C33B300DFE8D5 /* RecordListDataSource.swift */; };
 		43F6C08ECDA5F2BD68575774 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC0CBC50AF4ECE4A60BDC3F /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +59,11 @@
 		1812185C1C1BECF6000B3095 /* WYRecordManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WYRecordManager.swift; sourceTree = "<group>"; };
 		1812185F1C1BF15E000B3095 /* NSObject+CurrentTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+CurrentTime.swift"; sourceTree = "<group>"; };
 		181218611C1C078B000B3095 /* WYAudioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WYAudioButton.swift; sourceTree = "<group>"; };
+		181218671C1C1F60000B3095 /* RecordListPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordListPage.swift; sourceTree = "<group>"; };
+		1812186A1C1C1FD8000B3095 /* RecordListPageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordListPageViewCell.swift; sourceTree = "<group>"; };
+		1812186C1C1C2073000B3095 /* RecordListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordListModel.swift; sourceTree = "<group>"; };
+		1812186E1C1C2145000B3095 /* RecordListPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordListPlayerManager.swift; sourceTree = "<group>"; };
+		18C0DE281C1C33B300DFE8D5 /* RecordListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordListDataSource.swift; sourceTree = "<group>"; };
 		3BB122E26CE3F1DE4E334FC2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DBC0CBC50AF4ECE4A60BDC3F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE0FE4C848216C76BB7A47DC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,8 +105,10 @@
 				1812184E1C1BE530000B3095 /* WYNavigation.xcodeproj */,
 				1812183C1C1BE3D1000B3095 /* AppDelegate.swift */,
 				1812183E1C1BE3D1000B3095 /* ViewController.swift */,
+				181218671C1C1F60000B3095 /* RecordListPage.swift */,
 				1812185C1C1BECF6000B3095 /* WYRecordManager.swift */,
 				181218611C1C078B000B3095 /* WYAudioButton.swift */,
+				181218691C1C1FAE000B3095 /* RecordList */,
 				1812185E1C1BF13C000B3095 /* util */,
 				181218401C1BE3D1000B3095 /* Main.storyboard */,
 				181218431C1BE3D1000B3095 /* Assets.xcassets */,
@@ -120,6 +132,17 @@
 				1812185F1C1BF15E000B3095 /* NSObject+CurrentTime.swift */,
 			);
 			path = util;
+			sourceTree = "<group>";
+		};
+		181218691C1C1FAE000B3095 /* RecordList */ = {
+			isa = PBXGroup;
+			children = (
+				1812186A1C1C1FD8000B3095 /* RecordListPageViewCell.swift */,
+				1812186C1C1C2073000B3095 /* RecordListModel.swift */,
+				1812186E1C1C2145000B3095 /* RecordListPlayerManager.swift */,
+				18C0DE281C1C33B300DFE8D5 /* RecordListDataSource.swift */,
+			);
+			path = RecordList;
 			sourceTree = "<group>";
 		};
 		A50716755055E7911681438C /* Pods */ = {
@@ -279,8 +302,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1812183F1C1BE3D1000B3095 /* ViewController.swift in Sources */,
+				1812186F1C1C2145000B3095 /* RecordListPlayerManager.swift in Sources */,
 				1812183D1C1BE3D1000B3095 /* AppDelegate.swift in Sources */,
 				181218601C1BF15E000B3095 /* NSObject+CurrentTime.swift in Sources */,
+				181218681C1C1F60000B3095 /* RecordListPage.swift in Sources */,
+				18C0DE291C1C33B300DFE8D5 /* RecordListDataSource.swift in Sources */,
+				1812186D1C1C2073000B3095 /* RecordListModel.swift in Sources */,
+				1812186B1C1C1FD8000B3095 /* RecordListPageViewCell.swift in Sources */,
 				1812185D1C1BECF6000B3095 /* WYRecordManager.swift in Sources */,
 				181218621C1C078B000B3095 /* WYAudioButton.swift in Sources */,
 			);
@@ -394,6 +422,11 @@
 			baseConfigurationReference = FE0FE4C848216C76BB7A47DC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WYAudio",
+				);
 				INFOPLIST_FILE = WYAudio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangyu.WYAudio;
@@ -406,6 +439,11 @@
 			baseConfigurationReference = 3BB122E26CE3F1DE4E334FC2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WYAudio",
+				);
 				INFOPLIST_FILE = WYAudio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangyu.WYAudio;
