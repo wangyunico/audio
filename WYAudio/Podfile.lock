@@ -1,0 +1,42 @@
+PODS:
+  - Alamofire (3.1.0)
+  - HanekeSwift (0.10.0)
+  - JSONModel (1.1.2)
+  - Kingfisher (1.7.0)
+  - SnapKit (0.15.0)
+  - SQLite.swift (1.0.0)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - HanekeSwift
+  - JSONModel (~> 1.1.2)
+  - Kingfisher (~> 1.6)
+  - SnapKit (~> 0.15.0)
+  - SQLite.swift (from `https://github.com/stephencelis/SQLite.swift.git`)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  SQLite.swift:
+    :git: https://github.com/stephencelis/SQLite.swift.git
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SQLite.swift:
+    :commit: da2d43422a72ae0e91356fccfde1959d43b97385
+    :git: https://github.com/stephencelis/SQLite.swift.git
+  SwiftyJSON:
+    :commit: 8e618c8baf6323a5079c6549bb38d48357b31630
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  Alamofire: 415bd7f56197722978759078486689f7ef913dce
+  HanekeSwift: d6f5bdf9dbdbbc09d59623b2c1d533e46463dd4d
+  JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
+  Kingfisher: 906bf9821bd32d06d4aaecc60431857e70ccabaa
+  SnapKit: 4962eed2ee18e48cbd2b2292fffc57efe7235f87
+  SQLite.swift: 3bb75f5a650f08673276bc6d3fb1de1b542b8f4d
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+COCOAPODS: 0.39.0
