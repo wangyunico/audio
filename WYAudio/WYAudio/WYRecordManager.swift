@@ -33,7 +33,7 @@ class WYRecordManager: NSObject,AVAudioRecorderDelegate {
             if !(NSFileManager.defaultManager().fileExistsAtPath(filePath)) {
                 try! NSFileManager.defaultManager().createDirectoryAtPath(filePath, withIntermediateDirectories: true, attributes: nil)
             }
-            let url = NSURL(string:"\(filePath)/\(geCurrentTime()))")!
+            let url = NSURL(string:"\(filePath)/\(geCurrentTime())")!
             self.recorderUrl = url
             let session = AVAudioSession.sharedInstance()
             try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
@@ -73,7 +73,10 @@ class WYRecordManager: NSObject,AVAudioRecorderDelegate {
     
     func stopRecoding()->(){
         self.recorder.stop()
+        self.displayLink?.invalidate()
         self.reco = nil;
+        self.displayLink = nil
+        
     }
     
     func startPlaying()->(){
@@ -94,9 +97,16 @@ class WYRecordManager: NSObject,AVAudioRecorderDelegate {
             player.stop()
         }
     }
+    func clearCache()->Void{
+        guard let resourceURL = self.recorderUrl else{
+            return
+        }
+        let _ = try? NSFileManager.defaultManager().removeItemAtURL(resourceURL)
+    }
+    
     // MARK: private methods 
     
-    private func soundsDegree(){
+    func soundsDegree(){
         self.recorder.updateMeters()
         let result = pow(10.0, 0.05 * self.recorder.peakPowerForChannel(0))*10
         var degree:Int = 0
