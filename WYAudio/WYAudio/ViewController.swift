@@ -55,6 +55,9 @@ class ViewController: UIViewController,WYAudioButtonDelegate {
     func rightButtonTap(){
         let nextViewController = RecordListPage()
         self.pushPage(nextViewController)
+        if let record = self.record {
+            record.stopPlaying()
+        }
     }
     
     // MARK - prvate function

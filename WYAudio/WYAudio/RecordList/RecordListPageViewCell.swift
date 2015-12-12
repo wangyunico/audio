@@ -110,10 +110,16 @@ class RecordListPageViewCell: UITableViewCell {
         if keyPath == "isPlaying" {
             if let change = change where context == nil {
                 let isPlaying = change[NSKeyValueChangeNewKey] as! Bool
-                let wasPlaying = change[NSKeyValueChangeNewKey] as! Bool
+                let wasPlaying = change[NSKeyValueChangeOldKey] as! Bool
                 if isPlaying != wasPlaying {
                     // 根据当前的isPaling 做判断
-                    self.button.isPlaying = isPlaying
+                    dispatch_async(dispatch_get_main_queue()) { [weak self] in
+                        if let strongSelf = self {
+                            strongSelf.button.isPlaying = isPlaying
+                        }
+                        
+                    }
+                    
                 }
             }
         }

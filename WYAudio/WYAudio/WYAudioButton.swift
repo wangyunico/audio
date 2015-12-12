@@ -36,7 +36,7 @@ class WYAudioButton: UIButton {
                 self.setTitle("开始录音", forState: .Normal)
                 self.delegate?.recordStart(self.recordManager)
             case .RecordDidCancel:
-                self.setTitle("取消录音", forState: .Normal)
+                self.setTitle("录音被取消", forState: .Normal)
                 self.delegate?.recordCanceled(self.recordManager)
             case .Recording:
                 self.setTitle("正在录音", forState: .Normal)

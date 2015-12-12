@@ -38,7 +38,7 @@ class RecordListPage: UIViewController,UITableViewDelegate {
     // MARK -- UITableViewDelegate 
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
         // 处理是停止当前
         let model = self.dataSource.dataSource[indexPath.row]
         RecordListPlayerManager.defaultManager.removePlayerModel(model)
